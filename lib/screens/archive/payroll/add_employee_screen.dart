@@ -38,7 +38,8 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
         backgroundColor: Colors.blue.shade600,
         foregroundColor: Colors.white,
         elevation: 0,
-        centerTitle: true,
+        scrolledUnderElevation: 0,
+        centerTitle: false,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -49,7 +50,8 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
               Container(
                 decoration: BoxDecoration(
                   color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(22),
+                  border: Border.all(color: theme.colorScheme.outlineVariant.withValues(alpha: 0.65)),
                   boxShadow: [
                     BoxShadow(
                       color:
@@ -116,8 +118,12 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                           decoration: InputDecoration(
                             labelText: 'Employee Name',
                             prefixIcon: const Icon(Icons.person_outline),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12)),
+                            filled: true,
+                            fillColor: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.22),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.outlineVariant)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.outlineVariant)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.primary, width: 1.6)),
                           ),
                           validator: (value) => value!.isEmpty
                               ? 'Please enter employee name'
@@ -131,8 +137,12 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                           decoration: InputDecoration(
                             labelText: 'Employee Type',
                             prefixIcon: const Icon(Icons.work_outline),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12)),
+                            filled: true,
+                            fillColor: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.22),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.outlineVariant)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.outlineVariant)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.primary, width: 1.6)),
                           ),
                           items: const [
                             DropdownMenuItem(
@@ -155,8 +165,12 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                             labelText: 'Wage/Salary Amount',
                             prefixIcon:
                                 const Icon(Icons.currency_rupee_outlined),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12)),
+                            filled: true,
+                            fillColor: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.22),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.outlineVariant)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.outlineVariant)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: theme.colorScheme.primary, width: 1.6)),
                             hintText: 'Enter amount in ₹',
                           ),
                           validator: (value) => value == null || value.isEmpty
@@ -197,6 +211,7 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16)),
                               elevation: 0,
+        scrolledUnderElevation: 0,
                             ),
                           ),
                         ),
@@ -212,7 +227,8 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
               Container(
                 decoration: BoxDecoration(
                   color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(22),
+                  border: Border.all(color: theme.colorScheme.outlineVariant.withValues(alpha: 0.65)),
                   boxShadow: [
                     BoxShadow(
                       color:
