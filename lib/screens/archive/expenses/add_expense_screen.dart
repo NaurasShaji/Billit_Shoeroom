@@ -60,7 +60,8 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
         backgroundColor: Colors.red.shade600,
         foregroundColor: Colors.white,
         elevation: 0,
-        centerTitle: true,
+        scrolledUnderElevation: 0,
+        centerTitle: false,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -71,7 +72,8 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               Container(
                 decoration: BoxDecoration(
                   color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(22),
+                  border: Border.all(color: theme.colorScheme.outlineVariant.withValues(alpha: 0.65)),
                   boxShadow: [
                     BoxShadow(
                       color:
@@ -297,9 +299,10 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                               backgroundColor: Colors.red.shade600,
                               foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16),
+                                borderRadius: BorderRadius.circular(22),
                               ),
                               elevation: 0,
+        scrolledUnderElevation: 0,
                             ),
                             child: _isLoading
                                 ? const SizedBox(
@@ -339,7 +342,8 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               Container(
                 decoration: BoxDecoration(
                   color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(22),
+                  border: Border.all(color: theme.colorScheme.outlineVariant.withValues(alpha: 0.65)),
                   boxShadow: [
                     BoxShadow(
                       color:
